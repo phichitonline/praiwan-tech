@@ -1,4 +1,5 @@
 @extends('layouts.theme')
+@section('menu-active-user','active')
 
 @section('content')
 

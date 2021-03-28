@@ -59,7 +59,7 @@
         <!--================Header Menu Area =================-->
         <header class="main_menu_area">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="/"><img src="{{ URL('img/logo.png') }}" alt=""></a>
+                <a class="navbar-brand" href="/"><img src="{{ URL('img/logo.png') }}" alt="ไพรวัลย์เทคโนโลยีการเกษตร"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
@@ -69,11 +69,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        <li class="nav-item dropdown submenu">
+                        <li class="nav-item @yield('menu-active-about')"><a class="nav-link" href="{{ route('about') }}">เกี่ยวกับเรา</a></li>
+                        <li class="nav-item @yield('menu-active-service')"><a class="nav-link" href="{{ route('service') }}">บริการของเรา</a></li>
+                        <li class="nav-item @yield('menu-active-portfolio')"><a class="nav-link" href="{{ route('portfolio') }}">ผลงาน</a></li>
+                        <li class="nav-item @yield('menu-active-contact')"><a class="nav-link" href="{{ route('contact') }}">ติดต่อเรา</a></li>
+                        <li class="nav-item @yield('menu-active-user') dropdown submenu">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 @guest
                                     สำหรับสมาชิก
@@ -175,9 +175,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </footer>
         <!--================End Footer Area =================-->
 
-
-
-
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="{{ URL('js/jquery-3.2.1.min.js') }}"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -200,7 +197,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <script src="{{ URL('vendors/owl-carousel/owl.carousel.min.js') }}"></script>
         <script src="{{ URL('vendors/magnify-popup/jquery.magnific-popup.min.js') }}"></script>
         <script src="{{ URL('js/smoothscroll.js') }}"></script>
+        <script src="{{ URL('vendors/circle-bar/circle-progress.min.js') }}"></script>
+        <script src="{{ URL('vendors/circle-bar/plugins.js') }}"></script>
+        <script src="{{ URL('vendors/isotope/imagesloaded.pkgd.min.js') }}"></script>
+        <script src="{{ URL('vendors/isotope/isotope.pkgd.min.js') }}"></script>
 
+        <script src="{{ URL('js/circle-active.js') }}"></script>
         <script src="{{ URL('js/theme.js') }}"></script>
     </body>
 </html>
