@@ -70,9 +70,9 @@
                     <ul class="navbar-nav">
                         <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item @yield('menu-active-about')"><a class="nav-link" href="{{ route('about') }}">เกี่ยวกับเรา</a></li>
-                        <li class="nav-item @yield('menu-active-service')"><a class="nav-link" href="{{ route('service') }}">บริการของเรา</a></li>
+                        {{-- <li class="nav-item @yield('menu-active-service')"><a class="nav-link" href="{{ route('service') }}">บริการของเรา</a></li> --}}
                         <li class="nav-item @yield('menu-active-portfolio')"><a class="nav-link" href="{{ route('portfolio') }}">ผลงาน</a></li>
-                        <li class="nav-item @yield('menu-active-contact')"><a class="nav-link" href="{{ route('contact') }}">ติดต่อเรา</a></li>
+                        {{-- <li class="nav-item @yield('menu-active-contact')"><a class="nav-link" href="{{ route('contact') }}">ติดต่อเรา</a></li> --}}
                         <li class="nav-item @yield('menu-active-user') dropdown submenu">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 @guest
@@ -116,37 +116,46 @@
                     <div class="row footer_widget_inner">
                         <div class="col-lg-4 col-sm-6">
                             <aside class="f_widget f_about_widget">
-                                <img src="img/footer-logo.png" alt="">
-                                <p>Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum.</p>
+                                <img src="{{ URL('img/footer-logo2.png') }}" alt="ไพรวัลย์เทคโนโลยีการเกษตร">
+                                <p>
+                                    รับปั่นนา ดำนา เกี่ยว ลาก ตาก คัด และจำหน่ายเมล็ดพันธุ์ข้าวปลูก
+                                </p>
                             </aside>
                         </div>
                         <div class="col-lg-4 col-sm-6">
                             <aside class="f_widget f_insta_widget">
                                 <div class="f_title">
-                                    <h3>Instagram</h3>
+                                    <h3>ภาพผลงาน</h3>
                                 </div>
                                 <ul>
-                                    <li><a href="#"><img src="{{ URL('img/instagram/ins-1.jpg') }}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{ URL('img/instagram/ins-2.jpg') }}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{ URL('img/instagram/ins-3.jpg') }}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{ URL('img/instagram/ins-4.jpg') }}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{ URL('img/instagram/ins-5.jpg') }}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{ URL('img/instagram/ins-6.jpg') }}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{ URL('img/instagram/ins-7.jpg') }}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{ URL('img/instagram/ins-8.jpg') }}" alt=""></a></li>
+                                    <li><a href="{{ route('portfolio') }}"><img src="{{ URL('img/instagram/praiwan-ins-1.jpg') }}" alt=""></a></li>
+                                    <li><a href="{{ route('portfolio') }}"><img src="{{ URL('img/instagram/praiwan-ins-2.jpg') }}" alt=""></a></li>
+                                    <li><a href="{{ route('portfolio') }}"><img src="{{ URL('img/instagram/praiwan-ins-3.jpg') }}" alt=""></a></li>
+                                    <li><a href="{{ route('portfolio') }}"><img src="{{ URL('img/instagram/praiwan-ins-4.jpg') }}" alt=""></a></li>
+                                    <li><a href="{{ route('portfolio') }}"><img src="{{ URL('img/instagram/praiwan-ins-5.jpg') }}" alt=""></a></li>
+                                    <li><a href="{{ route('portfolio') }}"><img src="{{ URL('img/instagram/praiwan-ins-6.jpg') }}" alt=""></a></li>
+                                    <li><a href="{{ route('portfolio') }}"><img src="{{ URL('img/instagram/praiwan-ins-7.jpg') }}" alt=""></a></li>
+                                    <li><a href="{{ route('portfolio') }}"><img src="{{ URL('img/instagram/praiwan-ins-8.jpg') }}" alt=""></a></li>
                                 </ul>
                             </aside>
                         </div>
                         <div class="col-lg-4 col-sm-6">
                             <aside class="f_widget f_subs_widget">
                                 <div class="f_title">
-                                    <h3>Subscribe to newsletter</h3>
+                                    <h3>ติดต่อสอบถาม</h3>
                                 </div>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Your e-mail address here" aria-label="Your e-mail address here">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-secondary submit_btn" type="button">Subscribe</button>
-                                    </span>
+                                    <div>
+                                        <a target="_blank" href="https://www.facebook.com/narumon1205"><img src="{{ URL('img/icon/icon-facebook.png') }}" height="35" alt="">ติดตามเพจ Facebook</a>
+                                    </div>
+                                    <div>
+                                        <a href="#"><img src="{{ URL('img/icon/icon-line.png') }}" height="35" alt="">LineID : nooying_narktub</a>
+                                    </div>
+                                    <div>
+                                        <a target="_blank" href="https://lin.ee/1cs7OIn"><img src="{{ URL('img/icon/icon-line.png') }}" height="35" alt="">Line Official ไพรวัลย์เทค</a>
+                                        <a target="_blank" href="https://lin.ee/1cs7OIn"><img src="https://qr-official.line.me/sid/M/345lgrdn.png"></a>
+                                    </div>
+
                                 </div>
                             </aside>
                         </div>
