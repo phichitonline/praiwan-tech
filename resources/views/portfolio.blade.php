@@ -24,7 +24,7 @@
                         <li data-filter=".service1"><a href="#">ดำนา</a></li>
                         <li data-filter=".service2"><a href="#">เกี่ยวข้าว</a></li>
                         <li data-filter=".seed"><a href="#">เมล็ดพันธุ์</a></li>
-                        <li data-filter=".solacell"><a href="#">โซล่าเซล</a></li>
+                        <li data-filter=".solarcell"><a href="#">โซล่าเซล</a></li>
                     </ul>
                 </div>
             </div>
@@ -171,6 +171,119 @@
                 <div class="ms_p_item wd_25 seed">
                     <img src="img/portfolio/praiwan/priwan-tech-045.jpg" alt="">
                 </div>
+
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-01.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-02.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-03.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-04.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-05.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-06.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-07.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-08.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-09.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-10.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-11.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-12.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-13.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-14.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-15.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-16.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-17.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-18.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-18.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-20.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-21.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-22.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-23.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-24.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-25.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-26.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-27.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-28.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-29.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-30.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-31.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-32.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-33.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-34.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-35.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-36.jpg" alt="">
+                </div>
+                <div class="ms_p_item wd_25 solarcell">
+                    <img src="img/portfolio/praiwan-solar/praiwan-solar-37.jpg" alt="">
+                </div>
+
 
             </div>
         </section>
