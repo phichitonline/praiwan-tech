@@ -35,3 +35,4 @@ Route::get('/portfolio', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/customers', [App\Http\Controllers\CustomersController::class, 'index'])->name('customers');
