@@ -1,6 +1,9 @@
 <?php
 
+// namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CustomersController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,5 +37,6 @@ Route::get('/portfolio', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/customers', [App\Http\Controllers\CustomersController::class, 'index'])->name('customers');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::resource('customers', CustomersController::class);

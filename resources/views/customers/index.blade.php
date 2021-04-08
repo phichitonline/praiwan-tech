@@ -8,11 +8,21 @@
             <div class="container">
                 <div class="banner_inner_text">
                     <h2>รายชื่อลูกค้า</h2>
-                    <p></p>
+                    <p> </p>
                 </div>
             </div>
         </section>
         <!--================End Banner Area =================-->
+
+        @if ($message = Session::get('success'))
+        <section class="blog_main_area">
+            <div class="container">
+                <div class="alert alert-success">
+                    {{ $message }}
+                </div>
+            </div>
+        </section>
+        @endif
 
         <!--================Blog Main Area =================-->
         <section class="blog_main_area p_100">
@@ -22,12 +32,10 @@
                         <div class="blog_main_inner">
                             <div class="blog_main_item">
                                 <div class="blog_text">
-                                    <a href="#"><h4>รายชื่อ</h4></a>
+                                    <h4>รายชื่อ</h4>
                                     <div class="blog_author">
-                                        <a href="#">เพิ่มชื่อ</a>
-                                        {{-- <a href="#">Design</a> --}}
+                                        <a href="{{ route('customers.create') }}" class="btn btn-success">เพิ่มชื่อ</a>
                                     </div>
-
 
                                     <table id="Datatable" class="table table-striped">
                                         <thead>
@@ -48,13 +56,20 @@
                                             <td>{{ $data->address }}</td>
                                             <td>{{ $data->phone }}</td>
                                             <td>
-                                                <a href="#{{ $data->id }}" data-toggle="modal" data-target="#myModal{{ $data->id }}">ข้อมูล</a> | แก้ไข | ลบ
+                                                <form action="{{ route('customers.destroy', $data->id) }}" method="post">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <a href="#{{ $data->id }}" class="btn btn-primary" data-toggle="modal" data-target="#myModal{{ $data->id }}">ข้อมูล</a>
+                                                    {{-- <a href="{{ route('customers.show', $data->id) }}" class="btn btn-primary">ข้อมูล</a> --}}
+                                                    <a href="{{ route('customers.edit', $data->id) }}" class="btn btn-secondary">แก้ไข</a>
+                                                    <button type="submit" class="btn btn-danger" onClick="return confirm('ยืนยันการลบรายการนี้');">ลบ</button>
+                                                </form>
                                             </td>
                                           </tr>
 
                                             <!-- The Modal Customer Info-->
                                             <div class="modal fade" id="myModal{{ $data->id }}">
-                                                <div class="modal-dialog modal-lg  modal-dialog-centered">
+                                                <div class="modal-dialog modal-lg modal-dialog-centered">
                                                 <div class="modal-content">
 
                                                     <!-- Modal Header -->
@@ -68,16 +83,16 @@
                                                         {{ $data->name }}  {{ $data->surname }}
                                                     </div>
                                                     <div class="modal-body">
-                                                        {{ $data->name }}  {{ $data->surname }}
+                                                        {{ $data->surname }}
                                                     </div>
                                                     <div class="modal-body">
-                                                        {{ $data->name }}  {{ $data->surname }}
+                                                        {{ $data->address }}
                                                     </div>
                                                     <div class="modal-body">
-                                                        {{ $data->name }}  {{ $data->surname }}
+                                                        {{ $data->phone }}
                                                     </div>
                                                     <div class="modal-body">
-                                                        {{ $data->name }}  {{ $data->surname }}
+                                                        {{ $data->name }}
                                                     </div>
 
                                                     <!-- Modal footer -->

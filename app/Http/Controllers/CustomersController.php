@@ -35,7 +35,7 @@ class CustomersController extends Controller
      */
     public function create()
     {
-        //
+        return view('customers.create');
     }
 
     /**
@@ -46,7 +46,17 @@ class CustomersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'surname' => 'required',
+            'phone' => 'required',
+        ]);
+
+        Customers::create($request->all());
+
+        return redirect()->route('customers.index')
+                               ->with('success', 'เพิ่มข้อมูลเรียบร้อยแล้ว');
+
     }
 
     /**
@@ -55,9 +65,9 @@ class CustomersController extends Controller
      * @param  \App\Models\customers  $customers
      * @return \Illuminate\Http\Response
      */
-    public function show(customers $customers)
+    public function show(Customers $customers)
     {
-        //
+        return view('customers.show', compact('customers'));
     }
 
     /**
@@ -66,9 +76,9 @@ class CustomersController extends Controller
      * @param  \App\Models\customers  $customers
      * @return \Illuminate\Http\Response
      */
-    public function edit(customers $customers)
+    public function edit(Customers $customers)
     {
-        //
+        return view('customers.edit', compact('customers'));
     }
 
     /**
@@ -78,9 +88,19 @@ class CustomersController extends Controller
      * @param  \App\Models\customers  $customers
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, customers $customers)
+    public function update(Request $request, Customers $customers)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'surname' => 'required',
+            'phone' => 'required',
+        ]);
+
+        $customers->update($request->all());
+
+        return redirect()->route('customers.index')
+                         ->with('success', 'แก้ไขข้อมูลเรียบร้อยแล้ว');
+
     }
 
     /**
@@ -89,8 +109,11 @@ class CustomersController extends Controller
      * @param  \App\Models\customers  $customers
      * @return \Illuminate\Http\Response
      */
-    public function destroy(customers $customers)
+    public function destroy(Customers $customers)
     {
-        //
+
+        $customers->delete();
+        return redirect()->route('customers.index')
+                         ->with('success', 'ลบข้อมูลเรียบร้อยแล้ว');
     }
 }
