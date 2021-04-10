@@ -8,7 +8,7 @@
             <div class="container">
                 <div class="banner_inner_text">
                     <h2>Register</h2>
-                    <p>ลงทะเบียนสมาชิกใหม่</p>
+                    <p>ลงทะเบียนผู้ใช้งาน</p>
                 </div>
             </div>
         </section>
@@ -23,7 +23,7 @@
                             @csrf
 
                             <div class="form-group col-lg-12">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="ชื่อผู้ใช้ User name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="ชื่อ-นามสกุล" value="{{ old('name') }}" required autocomplete="name" autofocus>
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -50,7 +50,7 @@
                             </div>
 
                             <div class="form-group col-lg-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="ยืนยันรหัสผ่าน" required autocomplete="new-password">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="ยืนยันรหัสผ่านอีกครั้ง" required autocomplete="new-password">
                             </div>
 
                             <div class="form-group col-lg-12">
