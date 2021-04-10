@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Customers;
+use App\Models\Customer;
 use Illuminate\Http\Request;
 // use Illuminate\Support\Facades\DB;
 
@@ -19,11 +19,11 @@ class CustomersController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(Customers $customers)
+    public function index(Customer $customer)
     {
 
         return view('customers.index', [
-            'customers' => $customers->all(),
+            'customer' => $customer->all(),
         ]);
 
     }
@@ -48,11 +48,10 @@ class CustomersController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'surname' => 'required',
             'phone' => 'required',
         ]);
 
-        Customers::create($request->all());
+        Customer::create($request->all());
 
         return redirect()->route('customers.index')
                                ->with('success', 'เพิ่มข้อมูลเรียบร้อยแล้ว');
@@ -65,9 +64,9 @@ class CustomersController extends Controller
      * @param  \App\Models\customers  $customers
      * @return \Illuminate\Http\Response
      */
-    public function show(Customers $customers)
+    public function show(Customer $customer)
     {
-        return view('customers.show', compact('customers'));
+        return view('customers.show', compact('customer'));
     }
 
     /**
@@ -76,9 +75,9 @@ class CustomersController extends Controller
      * @param  \App\Models\customers  $customers
      * @return \Illuminate\Http\Response
      */
-    public function edit(Customers $customers)
+    public function edit(Customer $customer)
     {
-        return view('customers.edit', compact('customers'));
+        return view('customers.edit', compact('customer'));
     }
 
     /**
@@ -88,15 +87,14 @@ class CustomersController extends Controller
      * @param  \App\Models\customers  $customers
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Customers $customers)
+    public function update(Request $request, Customer $customer)
     {
         $request->validate([
             'name' => 'required',
-            'surname' => 'required',
             'phone' => 'required',
         ]);
 
-        $customers->update($request->all());
+        $customer->update($request->all());
 
         return redirect()->route('customers.index')
                          ->with('success', 'แก้ไขข้อมูลเรียบร้อยแล้ว');
@@ -109,10 +107,10 @@ class CustomersController extends Controller
      * @param  \App\Models\customers  $customers
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Customers $customers)
+    public function destroy(Customer $customer)
     {
-
-        $customers->delete();
+        // $customer = Customer::find($request->id);
+        $customer->delete();
         return redirect()->route('customers.index')
                          ->with('success', 'ลบข้อมูลเรียบร้อยแล้ว');
     }
