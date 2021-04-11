@@ -111,12 +111,12 @@
                         <div class="blog_right_sidebar">
                             <aside class="r_widget search_widget">
                                 <div class="r_w_title">
-                                    <a href="#"><h4>{{ $customer->name }}</h4></a>
+                                    <a href="tel:{{ $customer->phone }}"><h4>{{ $customer->name }}</h4></a>
                                     <div class="blog_author">
-                                        <a href="#">{{ $customer->phone }}</a>
-                                        <a href="#">{{ $customer->description }}</a>
+                                        <a href="tel:{{ $customer->phone }}">{{ $customer->phone }}</a>
                                     </div>
                                     <p>{{ $customer->address }} {{ $customer->amphur }} {{ $customer->province }}</p>
+                                    <p>{{ $customer->description }}</p>
                                 </div>
                             </aside>
                             <aside class="r_widget tag_widget">

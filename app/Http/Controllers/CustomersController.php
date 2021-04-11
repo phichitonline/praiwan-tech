@@ -67,7 +67,7 @@ class CustomersController extends Controller
      */
     public function show(Customer $customer)
     {
-        $customer_service = Service::where('customer_id', '=', $customer->id)->get();;
+        $customer_service = Service::where('customer_id', '=', $customer->id)->get();
 
         return view('customers.show', [
             'customer_service' => $customer_service

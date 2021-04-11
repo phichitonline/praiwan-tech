@@ -161,8 +161,10 @@
                                         <a href="#"><img src="{{ URL('img/icon/icon-line.png') }}" height="35" alt="">LineID : nooying_narktub</a>
                                     </div>
                                     <div>
-                                        <a target="_blank" href="https://lin.ee/1cs7OIn"><img src="{{ URL('img/icon/icon-line.png') }}" height="35" alt="">Line Official ไพรวัลย์เทค</a>
-                                        <a target="_blank" href="https://lin.ee/1cs7OIn"><img src="https://qr-official.line.me/sid/M/345lgrdn.png"></a>
+                                        <a target="_blank" href="https://lin.ee/TPkwHjp"><img src="{{ URL('img/icon/icon-line.png') }}" height="35" alt="">Line Official ไพรวัลย์เทค</a>
+                                    </div>
+                                    <div>
+                                        <a target="_blank" href="https://lin.ee/TPkwHjp"><img src="https://qr-official.line.me/sid/M/528hivdm.png"></a>
                                     </div>
 
                                 </div>
