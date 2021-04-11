@@ -41,7 +41,7 @@
                                             <th>ID</th>
                                             <th>ชื่อ - นามสกุล</th>
                                             <th>ที่อยู่</th>
-                                            <th>เบอรโทรศัพท์</th>
+                                            <th>เบอร์โทรศัพท์</th>
                                             <th>ข้อมูลอื่นๆ</th>
                                             <th></th>
                                           </tr>
@@ -56,12 +56,10 @@
                                             <td>{{ $data->phone }}</td>
                                             <td>{{ $data->description }}</td>
                                             <td>
-                                                <form action="{{ route('customers.destroy', $data->id) }}" method="post">
+                                                <form action="{{ route('customers.destroy', $data->id) }}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <input type="hidden" name="id" value="{{ $data->id }}">
-                                                    <a href="#{{ $data->id }}" class="btn btn-primary" data-toggle="modal" data-target="#myModal{{ $data->id }}">ข้อมูล</a>
-                                                    {{-- <a href="{{ route('customers.show', $data->id) }}" class="btn btn-primary">ข้อมูล</a> --}}
+                                                    <a href="{{ route('customers.show', $data->id) }}" class="btn btn-primary">ข้อมูล</a>
                                                     <a href="{{ route('customers.edit', $data->id) }}" class="btn btn-secondary">แก้ไข</a>
                                                     <button type="submit" class="btn btn-danger" onClick="return confirm('ยืนยันการลบรายการนี้');">ลบ</button>
                                                 </form>

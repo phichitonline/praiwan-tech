@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Customer;
+use App\Models\Service;
 use Illuminate\Http\Request;
 // use Illuminate\Support\Facades\DB;
 
@@ -54,7 +55,7 @@ class CustomersController extends Controller
         Customer::create($request->all());
 
         return redirect()->route('customers.index')
-                               ->with('success', 'เพิ่มข้อมูลเรียบร้อยแล้ว');
+                         ->with('success', 'เพิ่มข้อมูลเรียบร้อยแล้ว');
 
     }
 
@@ -66,7 +67,11 @@ class CustomersController extends Controller
      */
     public function show(Customer $customer)
     {
-        return view('customers.show', compact('customer'));
+        $customer_service = Service::where('customer_id', '=', $customer->id)->get();;
+
+        return view('customers.show', [
+            'customer_service' => $customer_service
+        ], compact('customer'));
     }
 
     /**
