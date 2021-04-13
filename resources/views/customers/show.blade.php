@@ -41,10 +41,11 @@
                                     <img src="{{ URL('img/comment/icon-01.png') }}" alt="">
                                     <div class="d-flex">
                                         <h4>{{ $data->service }}</h4>
-                                        <h5>{{ $data->servicedate }}</h5>
+                                        <h5>{{ thaidate('j F Y',$data->servicedate) }}</h5>
                                     </div>
                                     <div class="media-body">
                                         <p>{{ $data->servicedescription }}</p>
+                                        <p>({{ $data->servicename }})</p>
                                         {{-- <a href="#">Delete</a> --}}
                                         <form action="{{ route('services.destroy', $data->id) }}" method="POST">
                                             @csrf
@@ -64,7 +65,7 @@
                                     @csrf
 
                                     <div class="form-group col-lg-6">
-                                        <label for="servicename">ชื่อผู้รับงาน/ให้บริการ</label>
+                                        <label for="servicename">ชื่อผู้รับงาน/ทำงาน</label>
                                         <input id="servicename" type="text" class="form-control @error('servicename') is-invalid @enderror" name="servicename" required>
                                         <input id="customer_id" type="hidden" class="form-control" name="customer_id" value="{{ $customer->id }}">
                                         @error('servicename')
@@ -84,7 +85,7 @@
                                     </div>
 
                                     <div class="form-group col-lg-12">
-                                        <label for="service">บริการที่ให้</label>
+                                        <label for="service">บริการ</label>
                                         <input id="service" type="text" class="form-control @error('service') is-invalid @enderror" name="service" required>
                                         @error('service')
                                             <span class="invalid-feedback" role="alert">
@@ -94,7 +95,7 @@
                                     </div>
 
                                     <div class="form-group col-lg-12">
-                                        <label for="servicedescription">รายละเอียดการให้บริการ</label>
+                                        <label for="servicedescription">รายละเอียดการรับบริการ</label>
                                         <textarea class="form-control" name="servicedescription" id="servicedescription" rows="1" placeholder="ข้อมูลอื่นๆ เช่นให้บริการอะไร จำนวนกี่ไร่"></textarea>
                                     </div>
 
@@ -111,12 +112,12 @@
                         <div class="blog_right_sidebar">
                             <aside class="r_widget search_widget">
                                 <div class="r_w_title">
-                                    <a href="tel:{{ $customer->phone }}"><h4>{{ $customer->name }}</h4></a>
+                                    ลูกค้า : <br><a href="tel:{{ $customer->phone }}"><h4>{{ $customer->name }}</h4></a>
                                     <div class="blog_author">
-                                        <a href="tel:{{ $customer->phone }}">{{ $customer->phone }}</a>
+                                        โทรศัพท์ : <a href="tel:{{ $customer->phone }}">{{ $customer->phone }}</a>
                                     </div>
-                                    <p>{{ $customer->address }} {{ $customer->amphur }} {{ $customer->province }}</p>
-                                    <p>{{ $customer->description }}</p>
+                                    <p>ที่อยู่ : <b>{{ $customer->address }} {{ $customer->amphur }} {{ $customer->province }}</b></p>
+                                    <p>อาชีพ/กิจการ : <b>{{ $customer->description }}</b></p>
                                 </div>
                             </aside>
                             <aside class="r_widget tag_widget">

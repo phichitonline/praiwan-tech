@@ -45,7 +45,7 @@
         <section class="talk_area">
             <div class="container">
                 <div class="talk_text">
-                    <h4>เราพร้อมที่จะให้บริการ</h4>
+                    <h4>ไพรวัลย์เทคโนโลยีการเกษตร</h4>
                     <a href="https://www.facebook.com/narumon1205">เพชรพงศ์พันธุ์ข้าว</a>
                 </div>
             </div>
