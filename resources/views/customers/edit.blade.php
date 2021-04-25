@@ -14,9 +14,13 @@
         <!--================End Banner Area =================-->
 
         <!--================Get in Touch Area =================-->
-        <section class="get_in_touch_area p_100">
+        <section class="blog_main_area p_100">
             <div class="container">
-                <div class="row get_touch_inner">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="blog_main_inner">
+                            <div class="blog_main_item">
+                                <div class="blog_text">
                     <div class="col-lg-12">
                         <a href="{{ route('customers.index') }}" class="btn btn-primary">กลับ</a>
                     </div>
@@ -31,7 +35,15 @@
                             </div>
                             <div class="form-group col-lg-6">
                                 <label for="phone">โทรศัพท์</label>
-                                <input id="phone" type="text" class="form-control" name="phone" value="{{ $customer->phone }}" required>
+                                <input id="phone" type="text" class="form-control" name="phone" placeholder="โทรศัพท์" value="{{ $customer->phone }}" required>
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label for="rice">พันธุ์ข้าว</label>
+                                <input id="rice" type="text" class="form-control" name="rice" placeholder="พันธุ์ข้าว" value="{{ $customer->rice }}" required>
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label for="farm">จำนวน (ไร่)</label>
+                                <input id="farm" type="text" class="form-control" name="farm" value="{{ $customer->farm }}" required>
                             </div>
 
                             <div class="form-group col-lg-12">
@@ -60,7 +72,13 @@
 
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+
+</div>
+
+</div>
+</section>
         <!--================End Get in Touch Area =================-->
 
 @endsection

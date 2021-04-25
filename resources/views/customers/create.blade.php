@@ -14,9 +14,13 @@
         <!--================End Banner Area =================-->
 
         <!--================Get in Touch Area =================-->
-        <section class="get_in_touch_area p_100">
+        <section class="blog_main_area p_100">
             <div class="container">
-                <div class="row get_touch_inner">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="blog_main_inner">
+                            <div class="blog_main_item">
+                                <div class="blog_text">
                     <div class="col-lg-12">
                         <a href="{{ route('customers.index') }}" class="btn btn-primary">กลับ</a>
                     </div>
@@ -37,6 +41,24 @@
                                 <label for="phone">โทรศัพท์</label>
                                 <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" placeholder="เบอร์โทรศัพท์" required>
                                 @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label for="rice">พันธุ์ข้าว</label>
+                                <input id="rice" type="text" class="form-control @error('rice') is-invalid @enderror" name="rice" placeholder="ระบุพันธุ์ข้าว" required>
+                                @error('rice')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label for="farm">จำนวน (ไร่)</label>
+                                <input id="farm" type="number" step="any" class="form-control @error('farm') is-invalid @enderror" name="farm" placeholder="ตัวเลขจำนวนไร่" required>
+                                @error('farm')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -69,7 +91,13 @@
 
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+
+</div>
+
+</div>
+</section>
         <!--================End Get in Touch Area =================-->
 
 @endsection

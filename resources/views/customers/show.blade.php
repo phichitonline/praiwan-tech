@@ -33,10 +33,40 @@
                     </div>
                     <div class="col-lg-9">
                         <div class="single_blog_inner">
-
                             <div class="blog_comment">
                                 <h3>ประวัติการรับบริการ</h3>
-                                @foreach ($customer_service as $data)
+                                <table id="Datatable" class="table table-striped">
+                                    <thead>
+                                      <tr>
+                                        <th>วันที่</th>
+                                        <th>บริการ</th>
+                                        <th>ผู้ทำงาน</th>
+                                        <th>รายละเอียด</th>
+                                        <th></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        @foreach ($customer_service as $data)
+                                        <tr>
+                                          <td>{{ thaidate('j M y',$data->servicedate) }}</td>
+                                          <td>{{ $data->service }}</td>
+                                          <td>{{ $data->servicename }}</td>
+                                          <td>{{ $data->servicedescription }}</td>
+                                          <td>
+                                            <form action="{{ route('services.destroy', $data->id) }}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <input type="hidden" name="customer_id" value="{{ $customer->id }}">
+                                                <button type="submit" class="btn btn-danger" onClick="return confirm('ยืนยันการลบรายการนี้');">ลบ</button>
+                                            </form>                                          </td>
+                                        </tr>
+                                        @endforeach
+
+                                      </tbody>
+                                    </table>
+
+                                {{-- @foreach ($customer_service as $data)
                                 <div class="media">
                                     <img src="{{ URL('img/comment/icon-01.png') }}" alt="">
                                     <div class="d-flex">
@@ -46,7 +76,6 @@
                                     <div class="media-body">
                                         <p>{{ $data->servicedescription }}</p>
                                         <p>({{ $data->servicename }})</p>
-                                        {{-- <a href="#">Delete</a> --}}
                                         <form action="{{ route('services.destroy', $data->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
@@ -55,9 +84,10 @@
                                         </form>
                                     </div>
                                 </div>
-                                @endforeach
+                                @endforeach --}}
 
                             </div>
+
                             <div class="blog_comment_form">
                                 <h3>เพิ่มข้อมูลการรับบริการ</h3>
 
@@ -117,7 +147,9 @@
                                         โทรศัพท์ : <a href="tel:{{ $customer->phone }}">{{ $customer->phone }}</a>
                                     </div>
                                     <p>ที่อยู่ : <b>{{ $customer->address }} {{ $customer->amphur }} {{ $customer->province }}</b></p>
-                                    <p>อาชีพ/กิจการ : <b>{{ $customer->description }}</b></p>
+                                    <p>พันธุ์ข้าว : <b>{{ $customer->rice }}</b></p>
+                                    <p>จำนวนไร่ : <b>{{ $customer->farm }}</b></p>
+                                    <p>ข้อมูลอื่นๆ : <b>{{ $customer->description }}</b></p>
                                 </div>
                             </aside>
                             <aside class="r_widget tag_widget">

@@ -38,10 +38,13 @@
                                     <table id="Datatable" class="table table-striped">
                                         <thead>
                                           <tr>
-                                            <th>ID</th>
+                                            {{-- <th>วันที่</th> --}}
                                             <th>ชื่อ - นามสกุล</th>
                                             <th>ที่อยู่</th>
                                             <th>เบอร์โทรศัพท์</th>
+                                            <th>พันธุ์ข้าว</th>
+                                            <th>จำนวนไร่</th>
+                                            {{-- <th>ผู้ทำงาน</th> --}}
                                             <th>ข้อมูลอื่นๆ</th>
                                             <th></th>
                                           </tr>
@@ -50,19 +53,37 @@
 
                                           @foreach ($customer as $data)
                                           <tr>
-                                            <td>{{ $data->id }}</td>
-                                            <td>{{ $data->name }}</td>
+                                            {{-- <td>{{ thaidate('j M y',date_format($data->created_at,"Y-m-d")) }}</td> --}}
+                                            <td><a href="{{ route('customers.show', $data->id) }}">{{ $data->name }}</a></td>
                                             <td>{{ $data->address }} {{ $data->amphur }} {{ $data->province }}</td>
                                             <td>{{ $data->phone }}</td>
+                                            <td>{{ $data->rice }}</td>
+                                            <td class="text-center">{{ $data->farm }}</td>
+                                            {{-- <td></td> --}}
                                             <td>{{ $data->description }}</td>
                                             <td>
-                                                <form action="{{ route('customers.destroy', $data->id) }}" method="POST">
+                                                {{-- <li class="nav-item dropdown"> --}}
+                                                    <a href="#" class="badge bg-danger-bright text-danger nav-link dropdown-toggle" data-toggle="dropdown">
+                                                        Action
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <form action="{{ route('customers.destroy', $data->id) }}" method="POST">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <a href="{{ route('customers.show', $data->id) }}" class="dropdown-item">ข้อมูล</a>
+                                                            <a href="{{ route('customers.edit', $data->id) }}" class="dropdown-item">แก้ไข</a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <button class="dropdown-item text-danger" onClick="return confirm('ยืนยันการลบรายการนี้');">ลบ</button>
+                                                        </form>
+                                                    </div>
+                                                {{-- </li> --}}
+                                                {{-- <form action="{{ route('customers.destroy', $data->id) }}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
                                                     <a href="{{ route('customers.show', $data->id) }}" class="btn btn-primary">ข้อมูล</a>
                                                     <a href="{{ route('customers.edit', $data->id) }}" class="btn btn-secondary">แก้ไข</a>
                                                     <button type="submit" class="btn btn-danger" onClick="return confirm('ยืนยันการลบรายการนี้');">ลบ</button>
-                                                </form>
+                                                </form> --}}
                                             </td>
                                           </tr>
 
